@@ -1,0 +1,6 @@
+n = tuple(range(1, 7))
+print(n)
+n1 = list(range(1, 7))
+print(n1)
+n2 ={}.fromkeys((1, 2, 3, 4, 5, 6,),'é número')
+print(n2)
