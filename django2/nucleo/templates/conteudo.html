@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>EU AMO PROGRAMAR</title>
+</head>
+<body>
+    <h1>PROGRAMAR É VIDA</h1>
+    <h2>{{Conteudo}}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>SOBRENOME</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        <p>LISTA DE CLIENTE</p>
+        {% for costumer in costumers %}
+           <tr>
+               <td>{{ costumer.nome}}</td>
+               <td>{{ costumer.sobrenome}}</td>
+               <td>{{ costumer.email}}</td>
+           </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

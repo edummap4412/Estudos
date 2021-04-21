@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cada dia que passa eu me apaixono mais por Programação .É isso que quero para minha vida </title>
+</head>
+<body>
+    <h1>Vamos que vamos que nao pode parar</h1>
+    <h5>{{Intro}}</h5>
+
+    <p>Checagem de Usuário</p>
+    <span>{{logado}}</span>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+        <p>LISTAGEM DE PRODUTOS</p>
+        {% for produto in produtos%}
+            <tr>
+                <td><a href="{% url 'produto' produto.id%}" >{{ produto.nome }}</a></td>
+                <td>{{ produto.preco }}</td>
+                <td>{{ produto.estoque }}</td>
+
+             </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
