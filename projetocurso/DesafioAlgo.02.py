@@ -25,7 +25,7 @@ while True:
     op =str(input("Quer continuar? [S/N]"))
     if op == 'N':
         break
-print(respaluno2)
+
 print(respaluno)
 for c in range(5):
     print(resp[c])

@@ -5,10 +5,12 @@
         # ( Server para instalar biblitecas da mesma versao para nao dar conflitos
             #salvando os arquivos em txt)
     # No Terminal e digite o comando : django-admin startproject django2.
+    # No Terminal e digite o comando : django-admin startapp (nome do app)
+
     # Em seguida
         """1) Vá em Installed_apps e defina o nome da aplicação (nesse caso: 'nucleo'
            2)No campo de urls.py ( DO PROJETO) na bibloteca "django.urls" adiciona-se um modulo "include".
-           Crie um 'Path' (path(''.include(nucleo.urls))
+           Crie um 'Path' (path(''.include('nucleo.urls'))
            3)dentro da pasta do projeto crie um file 'Python Package que será a APP(nucleo) do programa
            4)Cria um arquivo python para dentro da pasta "urls.py"
            5)Dentro de views.py definimos as funções

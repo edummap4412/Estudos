@@ -1,4 +1,4 @@
-sala = ['B1', 'B2', 'B3', 'B4', 'B5']
+sala = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7']
 sala2 = []
 
 while True:
@@ -14,7 +14,7 @@ while True:
     if op =='N':
         break
     else:
-        if len(sala2) == 5:
+        if len(sala2) == len(sala):
             print('Todas as cadeiras foram escolhidas')
             break
 

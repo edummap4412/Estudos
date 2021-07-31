@@ -172,3 +172,26 @@ for c in range(3):
     s += c
     print(s)
 
+
+lista = list()
+lista2 = list()
+while True:
+
+    lista.append(str(input('Qual seu nome?')))
+    lista.append(int(input('Qual sua idade?')))
+    lista2.append(lista.copy())
+    lista.clear()
+    op=' '
+    while not op in 'SN':
+        op = str(input('Adionar mais valores?'))
+    if op == 'N':
+        break
+print(lista2)
+
+for ind, c in enumerate(lista2):
+    print(c)
+
+
+
+
+

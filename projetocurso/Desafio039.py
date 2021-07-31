@@ -1,4 +1,5 @@
 from datetime import date
+
 sexo=str(input('Qual seu Sexo : Homem ou Mulher ')).strip()
 opcao=int(input('Escolha :'))
 if opcao == 1:

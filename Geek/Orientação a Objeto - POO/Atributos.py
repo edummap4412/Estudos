@@ -93,6 +93,7 @@ class Produto:
         self.valor = (valor * Produto.imposto)
         Produto.contador = self.id
 
+
 p1 = Produto('Play4', 3000)
 p2 = Produto('Xbox', 2800)
 
