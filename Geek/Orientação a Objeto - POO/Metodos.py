@@ -159,6 +159,7 @@ print(f'{user4.nome}, {user4.idade}, {user4.id}')
 
 user = Usuario('Eduardo', 'Mascarenhas','eduardomascaraehas@gmila.com', '12345')
 
+print(user.correr(30))
 user.conta_usuarios()
 
 
