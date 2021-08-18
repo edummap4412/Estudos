@@ -39,3 +39,18 @@ with open('filmes2.csv', 'w', encoding='utf8') as arquivos:
             duracao = input('informe Duração: ')
 
         escritor_csv.writerow({"Titulo": filme, 'Genero': genero, "Duração": duracao})
+
+
+with open('namefile.csv') as arquivo:
+    escritor_csv = writer(arquivo)
+    nome = None
+    escritor_csv.writerow(['Nome', 'Idade', 'Sexo'])
+    while nome != 'sair':
+        nome = input('Nome: ')
+        if nome != 'sair':
+            idade = input('idade')
+            sexo = input('sexo')
+
+        escritor_csv.writerow([nome, idade, sexo])
+
+

@@ -28,7 +28,7 @@ class Conta:
 
     contador = 4999
 
-    def __int__(self, limite, saldo, cliente):
+    def __init__(self, limite, saldo, cliente):
         self.__limite = limite
         self.__saldo = saldo
         ContaCorrente2 = self.__numero
