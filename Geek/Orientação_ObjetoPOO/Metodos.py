@@ -73,13 +73,13 @@ class Usuario:
         return f'{self.__nome} {self.__sobrenome} '
 
     def checa_senha(self):
-        if cryp.verify(senha, self.senha):
+        if cryp.verify(senha, self.__senha):
             return True
         return False
 
     def correr(self, metros):
 
-        print(f'{self.nome} esta correndo {metros} metros')
+        print(f'{self.__nome} esta correndo {metros} metros')
 
     def __gera_usuario(self):
         return self.__email.split('@')[0]
@@ -121,14 +121,14 @@ print(f'Senha User Criptografada : {user._Usuario__senha}')
 
 # Métodos de Classe
 
-class Usuario2 :
+class Usuario2:
 
     contador = 0
     exemplo = 'Tenho dúvidas de como usar essa cls de outra forma'
 
     @classmethod
     def exemplos(cls):
-        print(f'{cls.exemplos}')
+        return f'{cls.exemplos}'
 
     @staticmethod
     def lembrete():
@@ -145,9 +145,8 @@ user2 = Usuario2('Eduardo', 28)
 user3 = Usuario2('Juca', 29)
 user4 = Usuario2('Maria', 28)
 
-user2.exemplos()
+print(user2.exemplos())
 print(user2.lembrete())
-
 
 
 print(f'{user2.nome}, {user2.idade}, {user2.id}')

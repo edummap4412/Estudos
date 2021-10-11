@@ -1,9 +1,9 @@
 """
     **kwargs
-    Poderiamos chamar este parâmettro de **xis, mas por convenção chamamos de **kwargs
+    Poderiamos chamar este parâmetro de **xis, mas por convenção chamamos de **kwargs
 
     Este é só mais um parâmetro, mas diferente do *args que coloca os valors extras
-em uma tupla p **kwargas exige que utilizeos parâmetros nomeados , e transforma esses paraâmetros extras em um dicionário
+em uma tupla p **kwargs exige que utilizemos parâmetros nomeados , e transforma esses parâmetros extras em um dicionário
 
 """
 

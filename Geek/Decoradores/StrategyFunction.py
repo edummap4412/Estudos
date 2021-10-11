@@ -4,7 +4,7 @@ Custumer = namedtuple('Costumer', 'name fidelity')
 
 
 class LineItem:
-    def __init(self, product, quantity, price):
+    def __init__(self, product, quantity, price):
         self.product = product
         self.quantity = quantity
         self.price = price

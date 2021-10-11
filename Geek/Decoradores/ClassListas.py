@@ -20,9 +20,10 @@ class ListaUnica:
     def indice_válido(self, i):
         return i >= 0 and i<len(self.lista)
 
-    def adiciona(self, elem):
-        if self.pesquisa(elem) == -1:
-            self.lista.append(elem)
+    def adiciona(self):
+        for elem in self.lista:
+            if self.pesquisa(elem) == -1:
+                self.lista.append(elem)
 
     def remove(self, elem):
         self.lista.remove(elem)
