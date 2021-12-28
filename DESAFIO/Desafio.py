@@ -1,20 +1,34 @@
-import random
-dado = random.randint(1, 6)
-pontos = {}
-sorteio = []
-rodada = 10
-
-Tabuleiro = {"prop1": 40, "prop2": 40, "prop3": 50, "prop4": 70, "prop5": 30, "prop6": 40, "prop7": 80, "prop8": 90,
-             "prop9": 35, "prop10": 60,
-             "prop11": 45, "prop12": 25, "prop13": 20, "prop14": 30, "prop15": 15, "prop16": 10, "prop17": 20,
-             "prop18": 35, "prop19": 55, "prop20": 30}
 
 
-def sorteia(a):
+class Cliente():
+    def __init__(self, nome_completo, endereco, email):
+        self.nome_completo = nome_completo
+        self.endereco = endereco
+        self.email = email
 
-    random.shuffle(jogadores)
-    print(jogadores)
+    @property
+    def dados(self):
+        return self.nome_completo, self.endereco, self.email
 
-jogadores = ['jogador1', 'jogador2', 'jogador3', 'jogador4']
 
-sorteia(jogadores)
+class Banco(Cliente):
+    def __init__(self, dados : Cliente, conta, saldo):
+        self.dados = dados
+        self.conta = conta
+        self.saldo = saldo
+
+    def tipo_conta(self,tipo):
+        return tipo
+
+    def lista_dados(self, dados):
+        return
+
+
+dados_cliente = Cliente('Eduardo Michael Mascarenhas Pereira',
+                        'Rua Canfudé do Judas',
+                        'eduardo@eduardo.com')
+print(dados_cliente.dados)
+
+cliente_banco = Banco(dados_cliente.dados,123, 200)
+
+cliente_banco.da

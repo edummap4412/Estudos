@@ -1,4 +1,4 @@
-"""A test runner for pywin32"""
+"""A tests runner for pywin32"""
 import sys
 import os
 import site
@@ -10,7 +10,7 @@ import win32api
 this_dir = os.path.dirname(__file__)
 site_packages = [site.getusersitepackages(), ] + site.getsitepackages()
 
-# Run a test using subprocess and wait for the result.
+# Run a tests using subprocess and wait for the result.
 # If we get an returncode != 0, we know that there was an error.
 def run_test(script, cmdline_rest=""):
     dirname, scriptname = os.path.split(script)
@@ -32,7 +32,7 @@ def find_and_run(possible_locations, script, cmdline_rest=""):
             run_test(os.path.abspath(os.path.join(maybe, script)), cmdline_rest)
             break
     else:
-        raise RuntimeError("Failed to locate the test script '%s' in one of %s"
+        raise RuntimeError("Failed to locate the tests script '%s' in one of %s"
                            % (script, possible_locations))
 
 if __name__ == '__main__':
@@ -49,21 +49,21 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # win32
-    maybes = [os.path.join(directory, "win32", "test") for directory in code_directories]
+    maybes = [os.path.join(directory, "win32", "tests") for directory in code_directories]
     command = ('testall.py', )
     if args.no_user_interaction:
         command += ("-no-user-interaction", )
     find_and_run(maybes, *command)
 
     # win32com
-    maybes = [os.path.join(directory, "win32com", "test") for directory in [os.path.join(this_dir, "com"), ] + site_packages]
+    maybes = [os.path.join(directory, "win32com", "tests") for directory in [os.path.join(this_dir, "com"), ] + site_packages]
     find_and_run(maybes, 'testall.py', "2")
 
     # adodbapi
-    maybes = [os.path.join(directory, "adodbapi", "test") for directory in code_directories]
+    maybes = [os.path.join(directory, "adodbapi", "tests") for directory in code_directories]
     find_and_run(maybes, 'adodbapitest.py')
     # This script has a hard-coded sql server name in it, (and markh typically
-    # doesn't have a different server to test on) so don't bother trying to
+    # doesn't have a different server to tests on) so don't bother trying to
     # run it...
     # find_and_run(maybes, 'test_adodbapi_dbapi20.py')
 
