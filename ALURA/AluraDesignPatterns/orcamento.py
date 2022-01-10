@@ -11,7 +11,7 @@ class Orcamento():
         return total
 
     def obter_itens(self):
-        return tuple(self.__items)
+        return self.__items
 
     def adciona_item(self, item):
         self.__items.append(item)
